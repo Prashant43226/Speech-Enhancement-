@@ -28,6 +28,7 @@ The Mozilla Common Voice dataset is used for clean audio.the UrbanSound8k datase
 
 <br/>
 <br/>
+
 # Data Preprocessing:
 <br/>
 A majority of deep learning techniques nowadays dont require you to build most of the network from scratch.Take feature extractors like SIFT and SURF as an example, which are often used in Computer Vision problems like panorama stitching.Similarly for audio processing also we dont need to create the generalized data from scratch ie we let the network learn from the data.This avoids a lot of redundant work to be done on the data.We try to make the neural network learn from the data itself.
