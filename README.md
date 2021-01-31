@@ -41,10 +41,15 @@ To calculate the STFT of a signal we need to define a window of length M and hop
 <br/>
 The image below, from MATLAB, illustrates the process.
 <br/>
+<p align="center">
+  <img width="600" height="600" src="saarthi1.png" alt="Conversation diagram">
+</p>
 Here, we defined the STFT window as a periodic Hamming Window with length 256 and hop size of 64. This ensures a 75% overlap between the STFT vectors. In the end, we concatenate eight consecutive noisy STFT vectors and use them as inputs. Thus, an input vector has a shape of (129,8) and is composed of the current STFT noisy vector plus seven previous noisy STFT vectors. In other words, the model is an autoregressive system that predicts the current signal based on past observations. Therefore, the targets consist of a single STFT frequency representation of shape (129,1) from the clean audio.
 The image below depicts the feature vector creation.
 <br/>
-
+<p align="center">
+  <img width="600" height="600" src="saarthi2.png" alt="Conversation diagram">
+</p>
 <br/>
 <br/>
 <br/>
@@ -55,6 +60,9 @@ One of the most important problems is to create a proper architecture for this p
 <br/>
 For our model we based it on 2 networks:the U-Net and the CR-CED(Cascaded Redundant Convolutions Encoder-Decoder Network) Network.The model consists of multiple convolutional blocks with skip connections in between .In total the total number of trainable parameters come to around 1,69,989 with the majority being in the middle of the encoder and decoder.The encoder increases in size and the decoder decreases the size from the max position.Very much like Resnets the skip connections speed up convergence and reduces the vanishing of gradients.
 <br/>
+<p align="center">
+  <img width="600" height="600" src="saarthi3.png" alt="Conversation diagram">
+</p>
 One thing to note is that the convolution is performed along the frequency axis and thus the frequency axis remains constant during propagation.
 <br/>
 Once the network produces an output estimate we optimize the mean squared difference(MSE) between the output and the target audio signals.
@@ -70,10 +78,19 @@ loss: 0.1395 - rmse: 0.3735
 <br/>
 To which the output looked something like
 <br/>
-
-
+<p align="center">
+  <img width="600" height="400" src="saarthi4.png" alt="Conversation diagram">
+</p>
+<p align="center">
+  <img width="600" height="400" src="saarthi5.png" alt="Conversation diagram">
+</p>
 The network requires a lot of training time and computational power.With proper time and power it will provide better results.This can be seen from the fact that after 10 iterations with 20 steps per cycle the results weren’t as promising as it was after 20 iterations.Given more time to train and higher computation power(training on Google Colab doesn’t provide enough computation power to train the network as it is limited in the time provided to us and speed of computation)this network will work well with the problem present at hand and enhance the speech by successfully removing the noise.
 <br/>
-
+<p align="center">
+  <img width="600" height="400" src="saarthi6.png" alt="Conversation diagram">
+</p>
+<p align="center">
+  <img width="600" height="400" src="saarthi7.png" alt="Conversation diagram">
+</p>
 This can also be seen from the original Daitan Innovation work where they were able to remove the noise in  the audio using CR-CED network and using 400 epochs and 100 steps per epoch(which cannot be carried out unfortunately using the present available resources with me).
 <br/>
