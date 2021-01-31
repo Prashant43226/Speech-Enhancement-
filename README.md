@@ -47,6 +47,7 @@ The image below depicts the feature vector creation.
 <br/>
 <br/>
 <br/>
+
 # DEEP LEARNING ARCHITECTURE
 <br/>
 One of the most important problems is to create a proper architecture for this project.This was decided upon that to create such a network the use of autoencoders would be very much suitable.Autoencoders are deep learning neural networks which consist of a Encoder and Decoder cascaded together.
@@ -59,6 +60,7 @@ Once the network produces an output estimate we optimize the mean squared differ
 <br/>
 <br/>
 <br/>
+
 # RESULTS AND DISCUSSION:
 <br/>
 This network requires a lot of computational power to train and time to train which was unfortunately not available at the present circumstances .However the results were promising and the network after a mere 20 iterations with 20 steps per epoch reduced its loss and rmse to
