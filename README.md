@@ -87,10 +87,10 @@ To which the output looked something like
 The network requires a lot of training time and computational power.With proper time and power it will provide better results.This can be seen from the fact that after 10 iterations with 20 steps per cycle the results weren’t as promising as it was after 20 iterations.Given more time to train and higher computation power(training on Google Colab doesn’t provide enough computation power to train the network as it is limited in the time provided to us and speed of computation)this network will work well with the problem present at hand and enhance the speech by successfully removing the noise.
 <br/>
 <p align="center">
-  <img width="600" height="100" src="saarthi6.png" alt="Conversation diagram">
+  <img width="600" height="180" src="saarthi6.png" alt="Conversation diagram">
 </p>
 <p align="center">
-  <img width="600" height="100" src="saarthi7.png" alt="Conversation diagram">
+  <img width="600" height="180" src="saarthi7.png" alt="Conversation diagram">
 </p>
 This can also be seen from the original Daitan Innovation work where they were able to remove the noise in  the audio using CR-CED network and using 400 epochs and 100 steps per epoch(which cannot be carried out unfortunately using the present available resources with me).
 <br/>
