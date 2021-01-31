@@ -96,6 +96,7 @@ The network requires a lot of training time and computational power.With proper 
 This can also be seen from the original Daitan Innovation work where they were able to remove the noise in  the audio using CR-CED network and using 400 epochs and 100 steps per epoch(which cannot be carried out unfortunately using the present available resources with me).
 <br/>
 <br/>
+
 # References:
 <br/>
 1.A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation [A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation]
