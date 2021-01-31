@@ -84,6 +84,7 @@ To which the output looked something like
 <p align="center">
   <img width="600" height="300" src="saarthi5.png" alt="Conversation diagram">
 </p>
+
 The network requires a lot of training time and computational power.With proper time and power it will provide better results.This can be seen from the fact that after 10 iterations with 20 steps per cycle the results weren’t as promising as it was after 20 iterations.Given more time to train and higher computation power(training on Google Colab doesn’t provide enough computation power to train the network as it is limited in the time provided to us and speed of computation)this network will work well with the problem present at hand and enhance the speech by successfully removing the noise.
 <br/>
 <p align="center">
@@ -94,3 +95,12 @@ The network requires a lot of training time and computational power.With proper 
 </p>
 This can also be seen from the original Daitan Innovation work where they were able to remove the noise in  the audio using CR-CED network and using 400 epochs and 100 steps per epoch(which cannot be carried out unfortunately using the present available resources with me).
 <br/>
+<br/>
+# References:
+<br/>
+1.A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation [A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation]
+(LINK: https://github.com/daitan-innovation/cnn-audio-denoiser)<br/>
+2.Tensorflow Unet [Tensorflow Unet]
+(LINK:https://github.com/jakeret/unet)<br/> 
+3.Tensorflow 2.0 implementation of the paper [A Fully Convolutional Neural Network for Speech Enhancement](https://pdfs.semanticscholar.org/9ed8/e2f6c338f4e0d1ab0d8e6ab8b836ea66ae95.pdf)<br/>
+4.Blog post: [Practical Deep Learning Audio Denoising](https://medium.com/better-programming/practical-deep-learning-audio-denoising-79c1c1aea299)
