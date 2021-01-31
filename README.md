@@ -1,6 +1,6 @@
 # Speech-Enhancement-
 
-#Introduction
+# Introduction
 <br/>
 A lot has been said and done in the field of Image processing and denoising an image.However when it comes to noise there is still a lot of scope of improvement in this field of study.This is because unlike images which consist of a lot of information and can be augmented and used in deep learning networks the information in voice cannot be augmented like that in images and is required to go through other mechanisms to be processed.This project deals with the creation of a Deep learning Speech enhancement module to improve the noise cancellation capabilities of a speech waveform.Speech denoising is a long standing problem and the ability to denoise speech can be used in various applications such as mobile communication and edge devices.A speech denoising system has the duties to remove the background noise from a speech with minimal distortion to the original voice sample.However this requires a deep understanding of the components involved to do so and also a lot of training time and moder computation.Efforts are being made to reduce the computations by reducing number of layers in neural networks .
 
@@ -9,14 +9,16 @@ A lot has been said and done in the field of Image processing and denoising an i
 <br/>
 <br/>
 
-Approach
+# Approach
+<br/>
 Classic solutions for speech denoising usually employ generative modeling. Here, statistical methods like Gaussian Mixtures estimate the noise of interest and then recover the noise-removed signal. However, recent development has shown that in situations where data is available, deep learning often outperforms these solutions.
 
 
 <br/>
 <br/>
 
-Dataset Generation:
+# Dataset Generation:
+<br/>
 The datasets used in this project are :
 1.Mozilla Common Voice dataset(for clear audio)
 2.UrbanSound8k dataset
@@ -26,7 +28,7 @@ The Mozilla Common Voice dataset is used for clean audio.the UrbanSound8k datase
 
 <br/>
 <br/>
-Data Preprocessing:
+# Data Preprocessing:
 <br/>
 A majority of deep learning techniques nowadays dont require you to build most of the network from scratch.Take feature extractors like SIFT and SURF as an example, which are often used in Computer Vision problems like panorama stitching.Similarly for audio processing also we dont need to create the generalized data from scratch ie we let the network learn from the data.This avoids a lot of redundant work to be done on the data.We try to make the neural network learn from the data itself.
 <br/>
@@ -45,7 +47,8 @@ The image below depicts the feature vector creation.
 <br/>
 <br/>
 <br/>
-DEEP LEARNING ARCHITECTURE
+# DEEP LEARNING ARCHITECTURE
+<br/>
 One of the most important problems is to create a proper architecture for this project.This was decided upon that to create such a network the use of autoencoders would be very much suitable.Autoencoders are deep learning neural networks which consist of a Encoder and Decoder cascaded together.
 <br/>
 For our model we based it on 2 networks:the U-Net and the CR-CED(Cascaded Redundant Convolutions Encoder-Decoder Network) Network.The model consists of multiple convolutional blocks with skip connections in between .In total the total number of trainable parameters come to around 1,69,989 with the majority being in the middle of the encoder and decoder.The encoder increases in size and the decoder decreases the size from the max position.Very much like Resnets the skip connections speed up convergence and reduces the vanishing of gradients.
@@ -56,7 +59,7 @@ Once the network produces an output estimate we optimize the mean squared differ
 <br/>
 <br/>
 <br/>
-RESULTS AND DISCUSSION:
+# RESULTS AND DISCUSSION:
 <br/>
 This network requires a lot of computational power to train and time to train which was unfortunately not available at the present circumstances .However the results were promising and the network after a mere 20 iterations with 20 steps per epoch reduced its loss and rmse to
  <br/>
