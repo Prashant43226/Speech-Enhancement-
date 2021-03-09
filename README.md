@@ -1,4 +1,6 @@
 # Speech-Enhancement-
+(Colab%20RDP/Colab%20RDP.ipynb) &nbsp;&nbsp; [![Open in Colab][Colab Badge]]
+<br/>
 
 # Introduction
 <br/>
@@ -26,6 +28,7 @@ The datasets used in this project are :
 <br/>
 The Mozilla Common Voice dataset is used for clean audio.the UrbanSound8k dataset consists of a large number of noise audios which can be mainly categorized into 10 different noises more or less.All these are combined to form the Daitan dataset.
 
+To generate the dataset using the Mozilla Common Voice and Urban Sound 8k dataset use the create_dataset.py script.(By running 'python create_dataset.py' from the terminal)
 <br/>
 <br/>
 
@@ -72,22 +75,22 @@ Once the network produces an output estimate we optimize the mean squared differ
 
 # RESULTS AND DISCUSSION:
 <br/>
-This network requires a lot of computational power to train and time to train which was unfortunately not available at the present circumstances .However the results were promising and the network after a mere 20 iterations with 20 steps per epoch reduced its loss and rmse to
+After training this model for 100 epochs with 40 steps per cycle the results were very promising.
  <br/>
-loss: 0.1395 - rmse: 0.3735
+loss: 0.1689 - rmse: 0.4110
 <br/>
-To which the output looked something like
+The output of the project looked something like
 <br/>
 <p align="center">
-  <img width="600" height="300" src="speech enhancement.png" alt="Conversation diagram">
+  <img width="800" height="450" src="speech enhancement.png" alt="Conversation diagram">
 </p>
-The network requires a lot of training time and computational power.With proper time and power it will provide better results.This can be seen from the fact that after 10 iterations with 20 steps per cycle the results weren’t as promising as it was after 20 iterations.Given more time to train and higher computation power(training on Google Colab doesn’t provide enough computation power to train the network as it is limited in the time provided to us and speed of computation)this network will work well with the problem present at hand and enhance the speech by successfully removing the noise.
+The network requires a lot of training time and computational power.With proper time and power it will provide better results.
 <br/>
 
 <p align="center">
-  <img width="600" height="300" src="speech enhancement2.png" alt="Conversation diagram">
+  <img width="800" height="450" src="speech enhancement2.png" alt="Conversation diagram">
 </p>
-This can also be seen from the original Daitan Innovation work where they were able to remove the noise in  the audio using CR-CED network and using 400 epochs and 100 steps per epoch(which cannot be carried out unfortunately using the present available resources with me).
+
 <br/>
 <br/>
 
