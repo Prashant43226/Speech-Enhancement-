@@ -51,7 +51,7 @@ Here, we defined the STFT window as a periodic Hamming Window with length 256 an
 The image below depicts the feature vector creation.
 <br/>
 <p align="center">
-  <img width="600" height="400" src="saarthi2.png" alt="Conversation diagram">
+  <img width="600" height="400" src="images/saarthi2.png" alt="Conversation diagram">
 </p>
 <br/>
 <br/>
@@ -64,7 +64,7 @@ One of the most important problems is to create a proper architecture for this p
 For our model we based it on 2 networks:the U-Net and the CR-CED(Cascaded Redundant Convolutions Encoder-Decoder Network) Network.The model consists of multiple convolutional blocks with skip connections in between .In total the total number of trainable parameters come to around 1,69,989 with the majority being in the middle of the encoder and decoder.The encoder increases in size and the decoder decreases the size from the max position.Very much like Resnets the skip connections speed up convergence and reduces the vanishing of gradients.
 <br/>
 <p align="center">
-  <img src="saarthi3.png" alt="Conversation diagram">
+  <img src="images/saarthi3.png" alt="Conversation diagram">
 </p>
 One thing to note is that the convolution is performed along the frequency axis and thus the frequency axis remains constant during propagation.
 <br/>
@@ -82,13 +82,13 @@ loss: 0.1689 - rmse: 0.4110
 The output of the project looked something like
 <br/>
 <p align="center">
-  <img width="800" height="450" src="speech enhancement.png" alt="Conversation diagram">
+  <img width="800" height="450" src="images/speech enhancement.png" alt="Conversation diagram">
 </p>
 The network requires a lot of training time and computational power.With proper time and power it will provide better results.
 <br/>
 
 <p align="center">
-  <img width="800" height="450" src="speech enhancement2.png" alt="Conversation diagram">
+  <img width="800" height="450" src="images/speech enhancement2.png" alt="Conversation diagram">
 </p>
 
 <br/>
@@ -96,9 +96,10 @@ The network requires a lot of training time and computational power.With proper 
 
 # References:
 <br/>
-1.A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation [A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation]
-(LINK: https://github.com/daitan-innovation/cnn-audio-denoiser)<br/>
-2.Tensorflow Unet [Tensorflow Unet]
+
+1.Tensorflow Unet [Tensorflow Unet]
 (LINK:https://github.com/jakeret/unet)<br/> 
-3.Tensorflow 2.0 implementation of the paper [A Fully Convolutional Neural Network for Speech Enhancement](https://pdfs.semanticscholar.org/9ed8/e2f6c338f4e0d1ab0d8e6ab8b836ea66ae95.pdf)<br/>
-4.Blog post: [Practical Deep Learning Audio Denoising](https://medium.com/better-programming/practical-deep-learning-audio-denoising-79c1c1aea299)
+2.Tensorflow 2.0 implementation of the paper [A Fully Convolutional Neural Network for Speech Enhancement](https://pdfs.semanticscholar.org/9ed8/e2f6c338f4e0d1ab0d8e6ab8b836ea66ae95.pdf)<br/>
+3.Blog post: [Practical Deep Learning Audio Denoising](https://medium.com/better-programming/practical-deep-learning-audio-denoising-79c1c1aea299)
+4.A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation [A Fully Convolutional Neural Network for Speech Enhancement by Daitan Innovation]
+(LINK: https://github.com/daitan-innovation/cnn-audio-denoiser)<br/>
