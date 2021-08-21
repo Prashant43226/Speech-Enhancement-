@@ -45,7 +45,7 @@ To calculate the STFT of a signal we need to define a window of length M and hop
 The image below, from MATLAB, illustrates the process.
 <br/>
 <p align="center">
-  <img width="600" height="400" src="saarthi1.png" alt="Conversation diagram">
+  <img width="600" height="400" src="images/saarthi1.png" alt="Conversation diagram">
 </p>
 Here, we defined the STFT window as a periodic Hamming Window with length 256 and hop size of 64. This ensures a 75% overlap between the STFT vectors. In the end, we concatenate eight consecutive noisy STFT vectors and use them as inputs. Thus, an input vector has a shape of (129,8) and is composed of the current STFT noisy vector plus seven previous noisy STFT vectors. In other words, the model is an autoregressive system that predicts the current signal based on past observations. Therefore, the targets consist of a single STFT frequency representation of shape (129,1) from the clean audio.
 The image below depicts the feature vector creation.
